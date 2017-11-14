@@ -46,4 +46,17 @@
 	<session-config>
 		<session-timeout>-10001</session-timeout>
 	</session-config>
+	<!-- 异常处理 -->
+	  <error-page>  
+        <error-code>404</error-code>  
+        <location>error/404.html</location>  
+      </error-page> 
+      <error-page>  
+        <error-code>500</error-code>  
+        <location>error/404.html</location>  
+      </error-page>
+      <error-page> 
+        <exception-type>java.lang.NullPointerException</exception-type> 
+        <location>error/error.html</location> 
+    </error-page>   
 </web-app>
