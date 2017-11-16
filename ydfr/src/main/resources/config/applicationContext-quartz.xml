@@ -18,7 +18,7 @@
 
     <context:component-scan base-package="com.xftimes.ebook" />
     <aop:aspectj-autoproxy proxy-target-class="true" />
-    <context:annotation-config />
+    <!--  <context:annotation-config/> 隐式地向 Spring容器注册 @标签对应的实体类   有context:component-scan 可以省略 -->
     <task:scheduled-tasks>
       <task:scheduled ref="quarztService" method="exportExeclData" cron="0 0 21 * * ?"/>
       <!-- <task:scheduled ref="quarztService" method="insertStatisticsRead" cron="0 0 23 * * ?"/>  -->
