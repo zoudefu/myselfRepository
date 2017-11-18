@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
 	<!-- context-param -> listener -> filter -> servlet 的执行顺序 -->
@@ -48,7 +48,7 @@
 	</session-config>
 	<!-- 异常处理 -->
 	  <error-page>  
-        <error-code>404</error-code>  
+      <error-code>404</error-code>  
         <location>error/404.html</location>  
       </error-page> 
       <error-page>  
@@ -58,5 +58,5 @@
       <error-page> 
         <exception-type>java.lang.NullPointerException</exception-type> 
         <location>error/error.html</location> 
-    </error-page>   
+    </error-page>    
 </web-app>
