@@ -52,9 +52,8 @@
 	</tx:advice>
 	<!-- 事务切面 -->
 	<aop:config>
-		<aop:advisor advice-ref="txAdvice" pointcut="execution(* com.xftimes.ebook.service.*..*.*(..))" />
+	    <!-- execution 返回类型为任意com.furui.ydfr.service 当前包和当前子包下（..） 所有类（*）所有方法的任意参数（*（..）） -->
+		<aop:advisor advice-ref="txAdvice" pointcut="execution(* com.furui.ydfr.service.。*.*(..))" />
 	</aop:config>
-	
 	<task:annotation-driven />
-	
 </beans>
