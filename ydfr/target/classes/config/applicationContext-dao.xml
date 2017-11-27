@@ -27,7 +27,7 @@
 	<property name="configLocation" value="classpath:sqlMapConfig.xml"></property>
 	<property name="mapperLocations">
 		<list>
-			<value>classpath:com/xftimes/ebook/dao/*.xml</value>
+			<value>classpath:com/furui/ydfr/dao/mapper/*.xml</value>
 		</list>
 	</property>
 	</bean>
