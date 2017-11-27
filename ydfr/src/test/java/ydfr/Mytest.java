@@ -5,10 +5,10 @@ public class Mytest {
 	{
 		try {
 			// 测试Class.forName()内的路径包括包+文件名
-			Class testTypeForName = Class.forName("ydfr.TestClassType");
+			Class<?> testTypeForName = Class.forName("ydfr.TestClassType");
 			System.out.println("testForName---" + testTypeForName);
 			// 测试类名.class
-			Class TestClassType = TestClassType.class;
+			Class<TestClassType> TestClassType = TestClassType.class;
 			System.out.println("TestClassType---" + TestClassType);
 			// 测试Object.getClass()
 			TestClassType testGetClass = new TestClassType();
