@@ -47,14 +47,6 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		<!--Tomcat -->
-		<!-- <dependency>
-			<groupId>org.apache.tomcat</groupId>
-			<artifactId>tomcat-servlet-api</artifactId>
-			<version>${project.tomcat.version}</version>
-			<scope>provided</scope>
-		</dependency> -->
-		<!-- spring动态代理依赖jar包 -->
 		<dependency>
 			<groupId>cglib</groupId>
 			<artifactId>cglib</artifactId>
