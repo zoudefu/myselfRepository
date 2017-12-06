@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.furui.ydfr.dao.UserDao">
-
-	<resultMap id="UserResultMap" type="com.furui.ydfr.entity.UserEntity">
-		<id column="id" property="id" jdbcType="VARCHAR" />
+	 <resultMap id="UserResultMap" type="com.furui.ydfr.entity.UserEntity">
+		<id     column="id" property="id" jdbcType="VARCHAR"/> 
 		<result column="username" property="username" jdbcType="VARCHAR" />
-		<reault column="password" property="password" jdbcType="VARCHAR">
-		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
-		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
-	</resultMap>
+	    <result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP"/> 
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+	</resultMap> 
     <!-- 批量插入用户信息 -->
 	<insert id="insertUserList" parameterType="com.furui.ydfr.entity.UserEntity">
 		insert into 
