@@ -9,7 +9,7 @@
 	<!-- 定义全局变量 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:applicationContext-*.xml</param-value>
+	   <param-value>classpath:applicationContext-*.xml</param-value>  
 	</context-param>
 	<!-- spring框架的启动入口 ContextLoaderListener 定义监听器，控制容器在启动和停止时的行为 -->
 	<listener>

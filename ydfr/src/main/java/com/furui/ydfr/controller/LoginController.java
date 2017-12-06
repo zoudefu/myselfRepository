@@ -15,7 +15,7 @@ public class LoginController {
 	
 	Logger logger = LoggerFactory.getLogger(LoginController.class);
 	
- @RequestMapping(value="/login")
+  @RequestMapping(value="/login")
   public ModelAndView login(String userName,String passWord){
 	 
 	 Map<String,Object> data=new HashMap<String, Object>();
