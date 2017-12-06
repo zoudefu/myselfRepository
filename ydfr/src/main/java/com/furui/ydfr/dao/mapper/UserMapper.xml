@@ -5,7 +5,7 @@
 		<id     column="id" property="id" jdbcType="VARCHAR"/> 
 		<result column="username" property="username" jdbcType="VARCHAR" />
 	    <result column="password" property="password" jdbcType="VARCHAR" />
-		<result column="create_time" property="createTime" jdbcType="TIMESTAMP"/> 
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
 		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
 	</resultMap> 
     <!-- 批量插入用户信息 -->

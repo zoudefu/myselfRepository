@@ -1,6 +1,6 @@
 package com.furui.ydfr.entity;
 
-import java.security.Timestamp;
+import java.sql.Date;
 
 public class UserEntity {
 
@@ -10,9 +10,9 @@ public class UserEntity {
 	
 	private String password;//密码
 	
-	private Timestamp createTime;//创建时间
+	private Date createTime;//创建时间
 	
-	private Timestamp updateTime;//更新时间
+	private Date updateTime;//更新时间
 
 	public String getId() {
 		return id;
@@ -38,19 +38,19 @@ public class UserEntity {
 		this.password = password;
 	}
 
-	public Timestamp getCreateTime() {
+	public Date getCreateTime() {
 		return createTime;
 	}
 
-	public void setCreateTime(Timestamp createTime) {
+	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
 
-	public Timestamp getUpdateTime() {
+	public Date getUpdateTime() {
 		return updateTime;
 	}
 
-	public void setUpdateTime(Timestamp updateTime) {
+	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
 	}
 	

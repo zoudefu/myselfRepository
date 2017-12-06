@@ -10,7 +10,7 @@
 	http://www.springframework.org/schema/context 
 	http://www.springframework.org/schema/context/spring-context-4.0.xsd">
     <!-- 扫描资源配置文件    classpath* 不仅仅在你自己的classpath文件下查找，而且还在项目里所有的jar查找-->
-	<context:property-placeholder location="classpath*:*.properties"/>
+	<context:property-placeholder location="classpath*:config/*.properties"/>
 	<!-- 数据源 -->
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
 		<property name="driverClassName" value="${jdbc.driver}"></property>
@@ -22,13 +22,23 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 	<property name="dataSource" ref="dataSource"></property>
 	<!-- 定义别名 -->
-	<property name="typeAliasesPackage" value="classpath:com/furui/ydfr/mappper/*.xml"></property>
+	<property name="typeAliasesPackage" value="com.furui.ydfr.entity"></property>
 	<!-- 加载sqlMapConfig配置文件 -->
-	<property name="configLocation" value="classpath:sqlMapConfig.xml"></property>
+	<property name="configLocation" value="classpath:config/sqlMapConfig.xml"></property>
 	<property name="mapperLocations">
 		<list>
 			<value>classpath:com/furui/ydfr/dao/mapper/*.xml</value>
 		</list>
 	</property>
 	</bean>
+		<!-- 接口代理开发，扫描接口 -->
+	<!-- 
+		1.接口名称和映射文件名称相同，且在同一个目录下
+		2.映射文件namespace名称必须是接口的全类路径名
+		3.映射文件sql语句的字段Id必须是接口方法名
+	 -->
+	 <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	 	<property name="basePackage" value="com.xftimes.ebook.dao"></property>
+	 	<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+	 </bean>
 	</beans>
