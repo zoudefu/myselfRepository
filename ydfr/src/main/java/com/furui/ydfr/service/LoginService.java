@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.furui.ydfr.dao.UserDao;
+import com.furui.ydfr.dao.IUserDao;
 import com.furui.ydfr.entity.UserEntity;
 import com.furui.ydfr.service.imp.ILoginService;
 
@@ -19,7 +19,7 @@ public class LoginService implements ILoginService {
 	Logger logger=LoggerFactory.getLogger(LoginService.class);
 
 	@Autowired
-	private UserDao userDao;
+	private IUserDao userDao;
 
 	@Override
 	public Map<String, String> insertUserList(List<UserEntity> userList) {
