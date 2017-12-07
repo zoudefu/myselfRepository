@@ -26,7 +26,20 @@
 	<mvc:annotation-driven />
 	<!-- 静态资源放行 不会因web.xml配置dispatch 找不到对应的controller 而报错 -->
 	<mvc:default-servlet-handler />
-	<!-- 文件上传表单的视图解析器 -->
+	   <!-- html视图解析器 必须先配置freemarkerConfig,注意html是没有prefix前缀属性的  用html原因 是完成前后台分离-->
+    <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">  
+        <property name="templateLoaderPath">  
+        <!-- **表示该路径下0个或多个目录文或者文件    /* 表示匹配0或多个字符比如/a/* 匹配/a/b 、 a/bc、 /a、 /a/bc.jsp -->
+            <value>/html/**/</value>  
+        </property>  
+    </bean>  
+     <bean id="htmlviewResolver"  
+        class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">  
+        <property name="suffix" value=".html" /> 
+        <property name="order" value="0"></property> 
+        <property name="contentType" value="text/html;charset=UTF-8"></property>         
+    </bean> 
+    <!-- 文件上传表单的视图解析器 -->
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="defaultEncoding" value="utf-8"></property>
@@ -34,11 +47,5 @@
 		<property name="maxUploadSize" value="10485760000"></property>
 		<!--最大内存大小 默认10240 -->
 		<property name="maxInMemorySize" value="40960"></property>
-	</bean>
-	<!--视图解析器 -->
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/jsp/"></property>
-		<property name="suffix" value=".jsp"></property>
-	</bean>
+	</bean> 
 </beans>
