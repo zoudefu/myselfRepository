@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.furui.ydfr.entity.UserEntity;
 
-public interface UserDao {
+public interface IUserDao {
 	/**
 	 * 批量插入用户信息
 	 * @param userList

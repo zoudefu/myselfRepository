@@ -17,6 +17,16 @@
 		<property name="url" value="${jdbc.url}"></property>
 		<property name="username" value="${jdbc.username}"></property>
 		<property name="password" value="${jdbc.password}"></property>
+		 <!-- 初始化连接大小 -->  
+        <property name="initialSize" value="${jdbc.initialSize}"></property>  
+        <!-- 连接池最大数量 -->  
+        <property name="maxActive" value="${jdbc.maxActive}"></property>  
+        <!-- 连接池最大空闲 -->  
+        <property name="maxIdle" value="${jdbc.maxIdle}"></property>  
+        <!-- 连接池最小空闲 -->  
+        <property name="minIdle" value="${jdbc.minIdle}"></property>  
+        <!-- 获取连接最大等待时间 -->  
+        <property name="maxWait" value="${jdbc.maxWait}"></property> 
 	</bean>
 	<!-- sqlSessioinFactory工厂：生产sqlSession -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -32,13 +42,8 @@
 	</property>
 	</bean>
 		<!-- 接口代理开发，扫描接口 -->
-	<!-- 
-		1.接口名称和映射文件名称相同，且在同一个目录下
-		2.映射文件namespace名称必须是接口的全类路径名
-		3.映射文件sql语句的字段Id必须是接口方法名
-	 -->
 	 <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-	 	<property name="basePackage" value="com.xftimes.ebook.dao"></property>
+	 	<property name="basePackage" value="com/furui/ydfr/dao/"></property>
 	 	<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 	 </bean>
 	</beans>
