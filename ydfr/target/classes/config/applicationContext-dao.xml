@@ -43,7 +43,11 @@
 	</bean>
 		<!-- 接口代理开发，扫描接口 -->
 	 <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+<<<<<<< HEAD
 	 	<property name="basePackage" value="com/furui/ydfr/dao/"></property>
+=======
+	 	<property name="basePackage" value="com.furui.ydfr.dao"></property>
+>>>>>>> 43616ef08b5e503b6ef5624613dc98d56d545d9c
 	 	<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 	 </bean>
 	</beans>
