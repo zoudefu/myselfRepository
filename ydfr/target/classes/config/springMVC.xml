@@ -30,7 +30,7 @@
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">  
         <property name="templateLoaderPath">  
        <!--  **表示该路径下0个或多个目录文或者文件    /* 表示匹配0或多个字符比如/a/* 匹配/a/b 、 a/bc、 /a、 /a/bc.jsp -->
-            <value>/html/**/</value>  
+            <value>/WEB-INF/views</value>  
         </property>  
     </bean>  
      <bean id="htmlviewResolver"  
