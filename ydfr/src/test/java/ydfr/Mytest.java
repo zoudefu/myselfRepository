@@ -1,9 +1,16 @@
 package ydfr;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.Locale;
+
 public class Mytest {
 	public static void main(String[] args)
 	{
 		try {
+			 Calendar cal = calendar();
+			 
+			 
 			// 测试Class.forName()内的路径包括包+文件名
 			Class<?> testTypeForName = Class.forName("ydfr.TestClassType");
 			System.out.println("testForName---" + testTypeForName);
@@ -18,6 +25,12 @@ public class Mytest {
 			e.printStackTrace();
 		}
 	}
+	 public static Calendar calendar() {
+	        Calendar cal = GregorianCalendar.getInstance(Locale.CHINESE);
+	        System.out.println(Calendar.DAY_OF_WEEK);
+	        System.out.println(Calendar.MONDAY);
+	        return cal;
+	    }
 }
  class TestClassType{  
 	  
