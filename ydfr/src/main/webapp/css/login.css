@@ -1,1 +1,29 @@
 @CHARSET "UTF-8";
+.username-div-class{
+	font-size: 1rem;
+    color: #969696;
+}
+.username-p{
+	font-size: 1rem;
+    color: #969696;
+}
+.username-input-class{
+	font-size: 1rem;
+    color: #969696;
+}
+.password-div-class{
+	font-size: 1rem;
+    color: #969696;
+}
+.password-p{
+	font-size: 1rem;
+    color: #969696;
+}
+.password-input-class{
+	font-size: 1rem;
+    color: #969696;
+}
+.login-button-class{
+	font-size: 1rem;
+    color: #969696;
+}

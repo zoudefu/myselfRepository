@@ -1,6 +1,5 @@
 package ydfr;
 
-import org.junit.Test;
 public class MySpringTest { 
 	
 	
