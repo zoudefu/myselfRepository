@@ -24,7 +24,6 @@ public class FourThreadTest {
 			futures.add(future);
 		}
 		threadPool.shutdown(); // 向线程池发送关闭的指令，等到已经提交的任务都执行完毕之后，线程池会关闭
-
 		int total = 0;
 		for (Future<Integer> future : futures) {
 			total += future.get(); // 阻塞，直到任务结束，返回任务的结果
