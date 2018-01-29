@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.furui.ydfr.dao.RoleRightRelationEntityMapper">
-  <resultMap id="BaseResultMap" type="com.furui.ydfr.entity.RoleRightRelationEntity">
+<mapper namespace="com.furui.ydfr.dao.IRoleRightRelationDao">
+  <resultMap id="RoleRightRelationResultMap" type="com.furui.ydfr.entity.RoleRightRelationEntity">
     <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="role_id" jdbcType="VARCHAR" property="roleId" />
     <result column="right_id" jdbcType="VARCHAR" property="rightId" />
@@ -13,7 +13,7 @@
   <sql id="Base_Column_List">
     id, role_id, right_id, right_type, create_time, update_time, enable
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="RoleRightRelationResultMap">
     select 
     <include refid="Base_Column_List" />
     from t_role_right_relation

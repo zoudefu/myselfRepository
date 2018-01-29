@@ -3,10 +3,15 @@
 <mapper namespace="com.furui.ydfr.dao.IUserDao">
 	 <resultMap id="UserResultMap" type="com.furui.ydfr.entity.UserEntity">
 		<id     column="id" property="id" jdbcType="VARCHAR"/> 
-		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="user_name" property="userName" jdbcType="VARCHAR" />
 	    <result column="password" property="password" jdbcType="VARCHAR" />
+	    <result column="login_name" property="loginName" jdbcType="VARCHAR" />
+	    <result column="department_id" property="departmentId" jdbcType="VARCHAR" />
+	    <result column="email" property="email" jdbcType="VARCHAR" />
+	    <result column="phone" property="phone" jdbcType="VARCHAR" />
 		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
 		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+		<result column="enable" property="updateTime" jdbcType="INTEGER"/>
 	</resultMap> 
     <!-- 批量插入用户信息 -->
 	<insert id="insertUserList" parameterType="com.furui.ydfr.entity.UserEntity">
@@ -27,5 +32,30 @@
 	      username=#{param1}
 	   and
 	      password=#{param2}           
+	</select>
+	<!--根据用户账号查询用户  -->
+	<select id="selectUserEntity" resultMap="UserResultMap">
+	   select  
+	       *
+	   from
+	       t_user_td
+	   where 
+	      username=#{param1}
+	</select>
+		<select id="selectUserRole" resultType="java.lang.String">
+	   select  
+	       *
+	   from
+	       t_user_td
+	   where 
+	      username=#{param1}
+	</select>
+	<select id="selectUserRoleRight" resultType="java.lang.String">
+	   select  
+	       *
+	   from
+	       t_user_td
+	   where 
+	      username=#{param1}
 	</select>
 </mapper>

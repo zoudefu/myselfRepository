@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.furui.ydfr.dao.RightEntityMapper">
-  <resultMap id="BaseResultMap" type="com.furui.ydfr.entity.RightEntity">
+<mapper namespace="com.furui.ydfr.dao.IRightDao">
+  <resultMap id="RightResultMap" type="com.furui.ydfr.entity.RightEntity">
     <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="parent_id" jdbcType="VARCHAR" property="parentId" />
     <result column="right_name" jdbcType="VARCHAR" property="rightName" />
@@ -13,11 +13,29 @@
   <sql id="Base_Column_List">
     id, parent_id, right_name, description, create_time, update_time, enable
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="RightResultMap">
     select 
     <include refid="Base_Column_List" />
     from t_right_td
     where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectUserRoleRight" resultType="java.lang.String">
+   select 
+       a.right_name
+  from  
+      t_right_td a 
+  where    exists(select
+                           b.id 
+                      from
+                         t_role_right_relation b right JOIN t_role_td c  on  b.role_id=c.id
+                      where
+                          a.id=b.right_id 
+                      and  
+                      c.name in
+                      <foreach item="item" index="index" collection="param1" open="(" separator="," close=")"> 
+                      #{item}
+                      </foreach>  
+                            )     
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from t_right_td

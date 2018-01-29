@@ -1,17 +1,27 @@
 package com.furui.ydfr.dao;
 
+import java.util.List;
+import java.util.Set;
+
 import com.furui.ydfr.entity.RightEntity;
 
 public interface IRightDao {
-    int deleteByPrimaryKey(String id);
+	
+	public int deleteByPrimaryKey(String id);
 
-    int insert(RightEntity record);
+    public int insert(RightEntity record);
 
-    int insertSelective(RightEntity record);
+    public int insertSelective(RightEntity record);
 
-    RightEntity selectByPrimaryKey(String id);
+    public RightEntity selectByPrimaryKey(String id);
 
-    int updateByPrimaryKeySelective(RightEntity record);
+    public int updateByPrimaryKeySelective(RightEntity record);
 
-    int updateByPrimaryKey(RightEntity record);
+    public int updateByPrimaryKey(RightEntity record);
+    /**
+	 * 根据角色id查询，权限信息
+	 * @param roleIdList
+	 * @return
+	 */
+	public Set<String> selectUserRoleRight(Set<String> roleIdList);
 }

@@ -1,17 +1,27 @@
 package com.furui.ydfr.dao;
 
+import java.util.Set;
+
 import com.furui.ydfr.entity.RoleEntity;
 
 public interface IRoleDao {
-    int deleteByPrimaryKey(String id);
+	
+    public   int deleteByPrimaryKey(String id);
 
-    int insert(RoleEntity record);
+    public   int insert(RoleEntity record);
 
-    int insertSelective(RoleEntity record);
+    public   int insertSelective(RoleEntity record);
 
-    RoleEntity selectByPrimaryKey(String id);
+    public  RoleEntity selectByPrimaryKey(String id);
 
-    int updateByPrimaryKeySelective(RoleEntity record);
+    public   int updateByPrimaryKeySelective(RoleEntity record);
 
-    int updateByPrimaryKey(RoleEntity record);
+    public   int updateByPrimaryKey(RoleEntity record);
+    
+    /**
+	 * 根据用户登录账号查询用的角色
+	 * @param userName
+	 * @return
+	 */
+	public Set<String> selectUserRole(String userName);
 }

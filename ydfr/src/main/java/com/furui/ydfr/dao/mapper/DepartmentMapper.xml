@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.furui.ydfr.dao.DepartmentEntityMapper">
-  <resultMap id="BaseResultMap" type="com.furui.ydfr.entity.DepartmentEntity">
+<mapper namespace="com.furui.ydfr.dao.IDepartmentDao">
+  <resultMap id="DepartmentResultMap" type="com.furui.ydfr.entity.DepartmentEntity">
     <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="parent_id" jdbcType="VARCHAR" property="parentId" />
     <result column="department_name" jdbcType="VARCHAR" property="departmentName" />
@@ -13,7 +13,7 @@
   <sql id="Base_Column_List">
     id, parent_id, department_name, description, create_time, update_time, enable
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="DepartmentResultMap">
     select 
     <include refid="Base_Column_List" />
     from t_department_id
