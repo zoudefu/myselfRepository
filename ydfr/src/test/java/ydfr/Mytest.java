@@ -8,9 +8,7 @@ public class Mytest {
 	public static void main(String[] args)
 	{
 		try {
-			 Calendar cal = calendar();
-			 
-			 
+			//Calendar cal = calendar();
 			// 测试Class.forName()内的路径包括包+文件名
 			Class<?> testTypeForName = Class.forName("ydfr.TestClassType");
 			System.out.println("testForName---" + testTypeForName);

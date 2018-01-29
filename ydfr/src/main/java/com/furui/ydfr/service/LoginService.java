@@ -3,12 +3,15 @@ package com.furui.ydfr.service;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.furui.ydfr.dao.IRightDao;
+import com.furui.ydfr.dao.IRoleDao;
 import com.furui.ydfr.dao.IUserDao;
 import com.furui.ydfr.entity.UserEntity;
 import com.furui.ydfr.service.imp.ILoginService;
@@ -20,6 +23,10 @@ public class LoginService implements ILoginService {
 
 	@Autowired
 	private IUserDao userDao;
+	@Autowired
+	private IRightDao rightDao;
+	@Autowired
+	private IRoleDao roleDao;
 
 	@Override
 	public Map<String, String> insertUserList(List<UserEntity> userList) {
@@ -46,4 +53,18 @@ public class LoginService implements ILoginService {
 		map.put("code", "500");
 		return map;
 	}
+	@Override
+	public UserEntity selectUserEntity(String userName){
+		return userDao.selectUserEntity(userName);
+	}
+
+	@Override
+	public Set<String> selectUserRoleRight(Set<String> roleIdList) {
+		return rightDao.selectUserRoleRight(roleIdList);
+	}
+
+	@Override
+	public Set<String> selectUserRole(String userName) {
+		return roleDao.selectUserRole(userName);
+	} 
 }
