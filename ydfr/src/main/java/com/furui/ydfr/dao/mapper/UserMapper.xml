@@ -16,20 +16,20 @@
     <!-- 批量插入用户信息 -->
 	<insert id="insertUserList" parameterType="com.furui.ydfr.entity.UserEntity">
 		insert into 
-		     t_user_td  (id, username, password,create_time,update_time)
+		     t_user_td  (id, user_name, password,create_time,update_time)
 		values 
 		<foreach  collection="list" item="user" index="index" separator=",">
-		(#{user.id},#{user.username},#{user.password},now(),now())
+		(#{user.id},#{user.userName},#{user.password},now(),now())
 		</foreach>
 	</insert>
 	<!--根据用户账号密码查询用户  -->
 	<select id="selectUser" resultMap="UserResultMap">
 	   select  
-	       username,password
+	       user_name,password
 	   from
 	       t_user_td
 	   where 
-	      username=#{param1}
+	      user_name=#{param1}
 	   and
 	      password=#{param2}           
 	</select>
@@ -40,7 +40,7 @@
 	   from
 	       t_user_td
 	   where 
-	      username=#{param1}
+	      user_name=#{param1}
 	</select>
 		<select id="selectUserRole" resultType="java.lang.String">
 	   select  
@@ -48,7 +48,7 @@
 	   from
 	       t_user_td
 	   where 
-	      username=#{param1}
+	      user_name=#{param1}
 	</select>
 	<select id="selectUserRoleRight" resultType="java.lang.String">
 	   select  
@@ -56,6 +56,6 @@
 	   from
 	       t_user_td
 	   where 
-	      username=#{param1}
+	      user_name=#{param1}
 	</select>
 </mapper>
