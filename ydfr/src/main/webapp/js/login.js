@@ -9,7 +9,12 @@ $(document).ready(function(){
 			data : {userName:userName,
 				    passWord:passWord},
 			success : function(data) {
-					alert('请检查您的用户名或密码是否正确');
+				window.location.href='http://localhost:8080/ydfr/html/index/index.html';
+//				debugger;
+//				  if(data.success){
+//				  }else{
+//				  alert('请检查您的用户名或密码是否正确');
+//				  }
 			}
 		});
   });
