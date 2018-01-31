@@ -19,7 +19,7 @@
     from t_right_td
     where id = #{id,jdbcType=VARCHAR}
   </select>
-  <select id="selectUserRoleRight" resultType="java.lang.String">
+  <select id="selectUserRoleRight" parameterType="java.util.Set" resultType="java.lang.String">
    select 
        a.right_name
   from  
@@ -31,8 +31,8 @@
                       where
                           a.id=b.right_id 
                       and  
-                      c.name in
-                      <foreach item="item" index="index" collection="param1" open="(" separator="," close=")"> 
+                      c.role_name in
+                      <foreach item="item" index="index" collection="set" open="(" separator="," close=")"> 
                       #{item}
                       </foreach>  
                             )     

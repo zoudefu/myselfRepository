@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,7 +60,7 @@ public class LoginService implements ILoginService {
 	}
 
 	@Override
-	public Set<String> selectUserRoleRight(Set<String> roleIdList) {
+	public Set<String> selectUserRoleRight(  Set<String> roleIdList) {
 		return rightDao.selectUserRoleRight(roleIdList);
 	}
 

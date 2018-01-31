@@ -1,8 +1,5 @@
 package com.furui.ydfr.controller;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import org.apache.shiro.authc.AuthenticationException;
@@ -28,9 +25,10 @@ public class MyRealm  extends AuthorizingRealm{
 	@Override
 	protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
 		String userName=(String)principals.getPrimaryPrincipal();
+		Set<String>roleSet=loginService.selectUserRole(userName);
 		SimpleAuthorizationInfo authorizationInfo=new SimpleAuthorizationInfo();
-		authorizationInfo.setRoles(loginService.selectUserRole(userName));
-		authorizationInfo.setStringPermissions(loginService.selectUserRoleRight(authorizationInfo.getRoles()));
+		authorizationInfo.setRoles(roleSet);
+		authorizationInfo.setStringPermissions(loginService.selectUserRoleRight(roleSet));
 		return authorizationInfo;
 	}
     /**

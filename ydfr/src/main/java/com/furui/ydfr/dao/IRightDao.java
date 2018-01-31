@@ -1,7 +1,8 @@
 package com.furui.ydfr.dao;
 
-import java.util.List;
 import java.util.Set;
+
+import org.apache.ibatis.annotations.Param;
 
 import com.furui.ydfr.entity.RightEntity;
 
@@ -23,5 +24,5 @@ public interface IRightDao {
 	 * @param roleIdList
 	 * @return
 	 */
-	public Set<String> selectUserRoleRight(Set<String> roleIdList);
+	public Set<String> selectUserRoleRight(@Param("set") Set<String> roleIdSet);
 }

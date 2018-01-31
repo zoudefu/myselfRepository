@@ -5,7 +5,6 @@ import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -20,7 +19,7 @@ public class LoginController {
 	
 	Logger logger = LoggerFactory.getLogger(LoginController.class);
 	
-  @RequestMapping(value="login" , method = RequestMethod.POST)
+  @RequestMapping(value="login")
   public ModelAndView login(String userName,String passWord){
 	  Map<String,Object> data=new HashMap<String, Object>();
 	  Subject subject=SecurityUtils.getSubject();
@@ -38,4 +37,9 @@ public class LoginController {
 	 }
 	 return new ModelAndView("/index/index",data) ;
 }
+  @RequestMapping(value="student")
+  public ModelAndView Test(){
+	  Map<String,Object> data=new HashMap<String, Object>();
+	  return new ModelAndView("/index/index",data) ;
+  }
 }
