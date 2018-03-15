@@ -55,5 +55,7 @@
 	    <!-- execution 返回类型为任意com.furui.ydfr.service 当前包和当前子包下（..） 所有类（*）所有方法的任意参数（*（..）） -->
 		<aop:advisor advice-ref="txAdvice" pointcut="execution(* com.furui.ydfr.service..*.*(..))" />
 	</aop:config>
-	<task:annotation-driven />
+	<!--然后设置动作启用定时任务,在Service具体的类上加定时器@Scheduled(cron = "*/5 * * * * ?")//每隔5秒执行一次，@Scheduled(cron = "0 0 1 * * ?")//每天凌晨1点整，@Scheduled(cron = "0 30 0 * * ?")//每天凌晨0点30分
+	@Scheduled(cron = "0 */60 * * * ?")//1小时处理一次-->
+	<task:annotation-driven/>
 </beans>

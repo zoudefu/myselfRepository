@@ -32,7 +32,8 @@
        <!--  **表示该路径下0个或多个目录文或者文件    /* 表示匹配0或多个字符比如/a/* 匹配/a/b 、 a/bc、 /a、 /a/bc.jsp -->
             <!-- <value>/WEB-INF/views</value> -->  
             <value>/html</value>   
-        </property>  
+        </property>
+        <property name="defaultEncoding" value="UTF-8"></property>
     </bean>  
      <bean id="htmlviewResolver"  
         class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">  

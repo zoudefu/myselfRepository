@@ -40,7 +40,6 @@
         </javaModelGenerator>    
     
         <!--对应的mapper.xml文件  -->    
-        <sqlMapGenerator targetPackage="com.furui.ydfr.dao.mapper" targetProject="./src/main/java">    
             <property name="enableSubPackages" value="true"/>    
         </sqlMapGenerator>    
     

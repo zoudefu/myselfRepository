@@ -559,6 +559,7 @@ public class DateUtil {
 		
 		cal.setTimeInMillis(millis);
 		
+		
 		cal.set(Calendar.HOUR, 0);  
 		cal.set(Calendar.MINUTE, 0);  
 		cal.set(Calendar.SECOND, 0);  

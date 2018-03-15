@@ -45,7 +45,7 @@ public class LoginController {
 	  Map<String,Object> data=new HashMap<String, Object>();
 	  data.put("message","用户登录失败");
 	  data.put("success", false);
-	  return new ModelAndView("/index/index",data) ;
+	  return new ModelAndView("/index/index",data);
   }
   //测试账号验证
   @RequestMapping(value="admin")
