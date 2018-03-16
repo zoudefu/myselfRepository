@@ -21,6 +21,16 @@
   <dependencies>
      <!-- activemq 消息对列需要的包 -->
 		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jms</artifactId>
+		    <version>5.0.3.RELEASE</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.activemq</groupId>
+		    <artifactId>activemq-pool</artifactId>
+		    <version>5.12.1</version>
+		</dependency>
+		<dependency>
 		    <groupId>org.apache.activemq</groupId>
 		    <artifactId>activemq-all</artifactId>
 		    <version>5.12.1</version>

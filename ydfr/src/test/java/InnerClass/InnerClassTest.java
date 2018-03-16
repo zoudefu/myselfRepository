@@ -5,6 +5,7 @@ public class InnerClassTest {
        //内部类Inner的声明
 		public class Inner{
 			private int size;
+			@SuppressWarnings("static-access")
 			public void doStuff(int size){
 				size++;//存取局部变量
 				 this.size++;//存取其内部类的成员变量

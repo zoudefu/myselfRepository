@@ -29,7 +29,8 @@ public class FutureCancalTestSecond {
 	        Long end=System.nanoTime();
 	        System.out.println("项目执行的时间"+String.valueOf(end-start));
 	    }
-	    private  static  void  cancelTask(final Future<?> future, final int delay){
+	    @SuppressWarnings("unused")
+		private  static  void  cancelTask(final Future<?> future, final int delay){
 		    Runnable cancellation=new Runnable() {
 				@Override
 				public void run() {
