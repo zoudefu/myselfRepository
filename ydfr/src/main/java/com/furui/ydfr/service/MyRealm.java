@@ -1,4 +1,4 @@
-package com.furui.ydfr.controller;
+package com.furui.ydfr.service;
 
 import java.util.Set;
 
@@ -42,7 +42,7 @@ public class MyRealm  extends AuthorizingRealm{
 			AuthenticationInfo authcInfo=new SimpleAuthenticationInfo(user.getUserName(),user.getPassword(),"myRealm");
 			return authcInfo;
 		}else{
-			return null;				
+			return null;		 			
 		}
 	}
 

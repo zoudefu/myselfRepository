@@ -19,33 +19,63 @@
 		<org.springframework.version>4.2.1.RELEASE</org.springframework.version>
 	</properties>
   <dependencies>
+     <!-- activemq 消息对列需要的包 -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jms</artifactId>
+		    <version>5.0.3.RELEASE</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.activemq</groupId>
+		    <artifactId>activemq-pool</artifactId>
+		    <version>5.12.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.activemq</groupId>
+		    <artifactId>activemq-all</artifactId>
+		    <version>5.12.1</version>
+		</dependency>
 	<!-- logback日志配置开始 -->
-	<dependency>
-		<groupId>ch.qos.logback</groupId>
-		<artifactId>logback-core</artifactId>
-		<version>1.1.2</version>
-	</dependency>
-	<dependency>
-		<groupId>ch.qos.logback</groupId>
-		<artifactId>logback-access</artifactId>
-		<version>1.1.2</version>
-	</dependency>
-	<dependency>
-		<groupId>ch.qos.logback</groupId>
-		<artifactId>logback-classic</artifactId>
-		<version>1.1.2</version>
-	</dependency>
-	<dependency>
-		<groupId>org.slf4j</groupId>
-		<artifactId>log4j-over-slf4j</artifactId>
-		<version>1.7.7</version>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-access</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+			<version>1.7.7</version>
 	</dependency>
 	<!-- logback日志配置结束 -->
 	<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+<<<<<<< HEAD
 		<dependency>
 			<groupId>org.freemarker</groupId>
 			<artifactId>freemarker</artifactId>
 			<version>2.3.27-incubating</version>
+=======
+	    <dependency>
+		  <groupId>org.freemarker</groupId>
+		  <artifactId>freemarker</artifactId>
+		  <version>2.3.27-incubating</version>
+	    </dependency>
+    <!-- redis 的客户端jedis -->
+    <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+		<dependency>
+		    <groupId>redis.clients</groupId>
+		    <artifactId>jedis</artifactId>
+		    <version>2.9.0</version>
+>>>>>>> 94ff9493df76ed9a058a45bfa909669875b32d1a
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
