@@ -1,4 +1,4 @@
-package com.furui.ydfr.service;
+package com.furui.ydfr.service.impl;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,7 +14,7 @@ import com.furui.ydfr.dao.IRightDao;
 import com.furui.ydfr.dao.IRoleDao;
 import com.furui.ydfr.dao.IUserDao;
 import com.furui.ydfr.entity.UserEntity;
-import com.furui.ydfr.service.imp.ILoginService;
+import com.furui.ydfr.service.ILoginService;
 
 @Service
 public class LoginService implements ILoginService {

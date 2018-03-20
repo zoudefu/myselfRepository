@@ -1,4 +1,4 @@
-package com.furui.ydfr.service;
+package com.furui.ydfr.service.impl;
 
 import java.util.Set;
 
@@ -13,7 +13,7 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.furui.ydfr.entity.UserEntity;
-import com.furui.ydfr.service.imp.ILoginService;
+import com.furui.ydfr.service.ILoginService;
 
 public class MyRealm  extends AuthorizingRealm{
 	
