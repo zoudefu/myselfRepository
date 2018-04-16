@@ -53,6 +53,12 @@
 	</dependency>
 	<!-- logback日志配置结束 -->
 	<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+<<<<<<< HEAD
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.27-incubating</version>
+=======
 	    <dependency>
 		  <groupId>org.freemarker</groupId>
 		  <artifactId>freemarker</artifactId>
@@ -64,6 +70,7 @@
 		    <groupId>redis.clients</groupId>
 		    <artifactId>jedis</artifactId>
 		    <version>2.9.0</version>
+>>>>>>> 94ff9493df76ed9a058a45bfa909669875b32d1a
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -92,6 +99,13 @@
 			<groupId>commons-httpclient</groupId>
 			<artifactId>commons-httpclient</artifactId>
 			<version>3.1</version>
+		</dependency>
+		<!--java io 相关的框架  -->
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+		    <groupId>commons-io</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>2.5</version>
 		</dependency>
 		<!--阿里巴巴连接池 -->
 		<dependency>
@@ -410,6 +424,22 @@
     	<groupId>org.tukaani</groupId>
     	<artifactId>xz</artifactId>
     	<version>1.6</version>
+	</dependency>
+	<!-- WebServic CXF 引入的jar包 -->
+	<dependency>
+	    <groupId>org.apache.cxf</groupId>
+	    <artifactId>cxf-rt-frontend-jaxws</artifactId>
+	    <version>3.1.6</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.cxf</groupId>
+	    <artifactId>cxf-core</artifactId>
+	    <version>3.1.6</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.cxf</groupId>
+	    <artifactId>cxf-rt-transports-http-jetty</artifactId>
+	    <version>3.1.6</version>
 	</dependency>
 	</dependencies>
   <build>
