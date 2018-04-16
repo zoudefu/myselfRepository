@@ -32,11 +32,11 @@
 		<property name="targetConnectionFactory" ref="targetConnectionFactory"/>
 	</bean>
 	
-	<!-- Spring提供的JMS工具类，它可以进行消息发送、接收等 -->
+	<!--  Spring提供的JMS工具类，它可以进行消息发送、接收等 -->
 	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
 		<!-- 这个connectionFactory对应的是我们定义的Spring提供的那个ConnectionFactory对象 -->
 		<property name="connectionFactory" ref="connectionFactory"/>
-	</bean>
+	</bean> 
 	
 	<!--1这个是队列目的地-->
 	<bean id="queueDestination" class="org.apache.activemq.command.ActiveMQQueue">
@@ -131,18 +131,18 @@
 	
 	<!--这个是主题目的地-->
 	<bean id="topicDestination" class="org.apache.activemq.command.ActiveMQTopic">
-		<constructor-arg value="topic"/>
+		<constructor-arg value="topicDestination"/>
 	</bean>
     <bean id="topicConsumerListen" class="com.furui.ydfr.service.impl.TopicConsumer">
     </bean>
 
-    <!--&lt;!&ndash; 消息监听容器 &ndash;&gt;>
-   <bean id="jmsTemplate"
+    <!--   消息监听容器 -->
+   <bean id="topicListenerContainer"
           class="org.springframework.jms.listener.DefaultMessageListenerContainer">
         <property name="connectionFactory" ref="connectionFactory" />
         <property name="destination" ref="topicDestination" />
         <property name="messageListener" ref="topicConsumerListen" />
-    </bean> -->
+    </bean>
 	
 	<!-- 类型转换器 -->
 	<bean id="emailMessageConverter" class="com.furui.ydfr.converter.EmailMessageConverter"/>

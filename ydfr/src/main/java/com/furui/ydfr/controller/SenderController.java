@@ -27,7 +27,7 @@ public class SenderController {
     @Autowired
     private ProducerService producerService;
     @Autowired
-    @Qualifier("queueDestination")
+    @Qualifier("sessionAwareQueue")
     private Destination destination;
 
     @Autowired
@@ -37,7 +37,10 @@ public class SenderController {
     @RequestMapping("/send")
     public void send(){
         for (int i=0; i<2; i++) {
-            producerService.sendMessage(destination, "你好，生产者！这是消息：" + (i+1));
+            producerService.sendMessage(topicDestination, "你好，生产者！这是消息：" + (i+1));
         }
+       /* for (int i=0; i<2; i++) {
+            producerService.sendMessage(destination, "你好，生产者！这是消息：" + (i+1));
+        }*/
     }
 }
