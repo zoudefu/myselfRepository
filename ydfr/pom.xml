@@ -58,12 +58,6 @@
 	</dependency>
 	<!-- logback日志配置结束 -->
 	<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
-<<<<<<< HEAD
-		<dependency>
-			<groupId>org.freemarker</groupId>
-			<artifactId>freemarker</artifactId>
-			<version>2.3.27-incubating</version>
-=======
 	    <dependency>
 		  <groupId>org.freemarker</groupId>
 		  <artifactId>freemarker</artifactId>
@@ -75,7 +69,6 @@
 		    <groupId>redis.clients</groupId>
 		    <artifactId>jedis</artifactId>
 		    <version>2.9.0</version>
->>>>>>> 94ff9493df76ed9a058a45bfa909669875b32d1a
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

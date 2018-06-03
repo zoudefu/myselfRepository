@@ -39,7 +39,6 @@
     
     <!-- 连接 activemq-->
     <amq:connectionFactory id="amqConnectionFactory" brokerURL="${activemq_url}" userName="${activemq_username}" password="${activemq_password}"/>        
-    
     <!-- 这里可以采用连接池的方式连接PooledConnectionFactoryBean -->
     <bean id="connectionFactory" class="org.springframework.jms.connection.CachingConnectionFactory">
         <!-- 配置连接 -->
