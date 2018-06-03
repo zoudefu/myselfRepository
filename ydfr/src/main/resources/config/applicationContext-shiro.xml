@@ -21,7 +21,7 @@
 	http://www.springframework.org/schema/util
 	http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 	<!-- 自定义realm -->
-    <bean id="myRealm" class="com.furui.ydfr.service.MyRealm">  
+    <bean id="myRealm" class="com.furui.ydfr.service.impl.MyRealm">  
   		<!--  <property name="authorizationCacheName" value="shiro-authorizationCache"/>
         <property name="cacheManager" ref="shiroCacheManager"/>  -->
   	</bean>

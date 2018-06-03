@@ -39,17 +39,25 @@
             <property name="trimStrings" value="true" />    
         </javaModelGenerator>    
     
+<<<<<<< HEAD
         <!--对应的mapper.xml文件  -->    
             <property name="enableSubPackages" value="true"/>    
+=======
+      <!--  对应的mapper.xml文件     -->
+        <sqlMapGenerator targetPackage="com.furui.ydfr.dao.mapper" targetProject="./src/main/java">
+        <property name="enableSubPackages" value="true"/>    
+        </sqlMapGenerator> 
+    
+>>>>>>> 9a1f95c7391f852c4edaa74ba7f314a7b7ed2dd6
         <!-- 对应的Mapper接口类文件 -->    
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.furui.ydfr.dao" targetProject="./src/main/java">    
             <property name="enableSubPackages" value="true"/>    
         </javaClientGenerator>    
         <!-- 列出要生成代码的所有表，这里配置的是不生成Example文件 -->    
-        <table tableName="t_user_role_relation" domainObjectName="UserRoleRelationEntity"    
+        <table tableName="t_employee_td" domainObjectName="EmployeeEntity"    
                enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"    
                enableSelectByExample="false" selectByExampleQueryId="false" >    
-            <property name="useActualColumnNames" value="false"/>    
+            <property name="EmployeeEntity" value="false"/>    
         </table>    
     </context>    
 </generatorConfiguration>
