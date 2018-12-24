@@ -28,7 +28,6 @@
 	<mvc:default-servlet-handler />
 	   <!-- html视图解析器 必须先配置freemarkerConfig,注意html是没有prefix前缀属性的  用html原因 是完成前后台分离-->
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">  
-    <property name="defaultEncoding" value="utf-8"></property>
         <property name="templateLoaderPath">  
        <!--  **表示该路径下0个或多个目录文或者文件    /* 表示匹配0或多个字符比如/a/* 匹配/a/b 、 a/bc、 /a、 /a/bc.jsp -->
             <!-- <value>/WEB-INF/views</value> -->  
