@@ -20,6 +20,7 @@ public class MyRealm  extends AuthorizingRealm{
 	@Autowired
 	private  ILoginService loginService;
     /**
+     * @author zoudefu
      * 验证成功后给用户添加角色和权限
      */
 	@Override
