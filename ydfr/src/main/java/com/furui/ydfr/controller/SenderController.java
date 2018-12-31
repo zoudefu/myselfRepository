@@ -1,4 +1,4 @@
-package com.furui.ydfr.controller;
+/*package com.furui.ydfr.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -9,7 +9,7 @@ import com.furui.ydfr.service.ProducerService;
 
 import javax.jms.Destination;
 
-/**
+*//**
  * Created by xin on 15-2-8 下午8:46
  *
  * @project activeMQ
@@ -18,7 +18,7 @@ import javax.jms.Destination;
  * @blog http://blog.csdn.net/u011439289
  * @email 888xin@sina.com
  * @github https://github.com/888xin
- */
+ *//*
 
 @Controller
 @RequestMapping("mq")
@@ -39,8 +39,9 @@ public class SenderController {
         for (int i=0; i<2; i++) {
             producerService.sendMessage(topicDestination, "你好，生产者！这是消息：" + (i+1));
         }
-       /* for (int i=0; i<2; i++) {
+        for (int i=0; i<2; i++) {
             producerService.sendMessage(destination, "你好，生产者！这是消息：" + (i+1));
-        }*/
+        }
     }
 }
+*/

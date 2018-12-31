@@ -1,4 +1,4 @@
-package com.furui.ydfr.service.impl;
+/*package com.furui.ydfr.service.impl;
 
 import java.io.Serializable;
 
@@ -33,9 +33,9 @@ public class ProducerServiceImpl implements ProducerService {
         System.out.println("---------------生产者发了一个消息：" + message);
         jmsTemplate.send(destination, new MessageCreator() {
             public Message createMessage(Session session) throws JMSException {
-				/*TextMessage textMessage = session.createTextMessage(message);
+				TextMessage textMessage = session.createTextMessage(message);
 				textMessage.setJMSReplyTo(responseDestination);
-				return textMessage;*/
+				return textMessage;
                 return session.createTextMessage(message);
             }
         });
@@ -43,14 +43,14 @@ public class ProducerServiceImpl implements ProducerService {
 
     public void sendMessage(final Destination destination, final Serializable obj) {
         //未使用MessageConverter的情况
-		/*jmsTemplate.send(destination, new MessageCreator() {
+		jmsTemplate.send(destination, new MessageCreator() {
 
 			public Message createMessage(Session session) throws JMSException {
 				ObjectMessage objMessage = session.createObjectMessage(obj);
 				return objMessage;
 			}
 			
-		});*/
+		});
         //使用MessageConverter的情况
         jmsTemplate.convertAndSend(destination, obj);
         jmsTemplate.execute(new SessionCallback<Object>() {
@@ -76,3 +76,4 @@ public class ProducerServiceImpl implements ProducerService {
     }
 
 }
+*/
