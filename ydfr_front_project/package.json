@@ -1,8 +1,8 @@
 {
-  "name": "ydfr",
+  "name": "ydfr_front_project",
   "version": "1.0.0",
-  "description": " my first vue_test",
-  "author": "manan",
+  "description": "A Vue.js project",
+  "author": "zoudefu <1308986619@qq.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",

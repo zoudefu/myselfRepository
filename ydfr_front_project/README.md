@@ -1,6 +1,6 @@
-# ydfr
+# ydfr_front_project
 
->  my first vue_test
+> A Vue.js project
 
 ## Build Setup
 
