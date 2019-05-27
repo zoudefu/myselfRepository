@@ -9,9 +9,9 @@
     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 	http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms-3.0.xsd">
 	
-  <!--   <context:component-scan base-package="com.furui"/>
+    <context:component-scan base-package="com.furui"/>
     
-    读取配置文件
+     <!--读取配置文件-->
     <bean id="propertyPlaceholderConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
             <array>
@@ -19,7 +19,7 @@
             </array>
         </property>
     </bean> 
-    连接 activemq
+   <!--  连接 activemq
     <amq:connectionFactory id="amqConnectionFactory" brokerURL="${activemq_url}" userName="${activemq_username}" password="${activemq_password}"/>        
     这里可以采用连接池的方式连接PooledConnectionFactoryBean
     <bean id="connectionFactory" class="org.springframework.jms.connection.CachingConnectionFactory">
