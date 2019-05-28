@@ -4,6 +4,7 @@ public class ExcptionTest {
 		ExcptionTest excptionTest=new ExcptionTest();
 		System.out.println(excptionTest.testException());
 	}
+	@SuppressWarnings("finally")
 	public String testException(){
 
 		try {

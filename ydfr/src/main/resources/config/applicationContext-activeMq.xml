@@ -12,10 +12,10 @@
     <context:component-scan base-package="com.furui"/>
     
      <!--读取配置文件-->
-    <bean id="propertyPlaceholderConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <bean id="propertyConstantUtil" class="com.furui.ydfr.common.util.PropertyConstantUtil">
         <property name="locations">
             <array>
-                <value>classpath:config/*.properties</value>
+                <value>classpath:config/**/*.properties</value>
             </array>
         </property>
     </bean> 

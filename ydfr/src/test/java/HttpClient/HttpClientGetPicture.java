@@ -13,7 +13,6 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
-import ch.qos.logback.core.util.FileUtil;
 
 public class HttpClientGetPicture  {
 	public static void main  (String[] args) 

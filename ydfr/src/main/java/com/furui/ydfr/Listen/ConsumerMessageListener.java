@@ -27,7 +27,6 @@ public class ConsumerMessageListener implements MessageListener {
                 e.printStackTrace();
             }
         } else if (message instanceof MapMessage) {
-            MapMessage mapMessage = (MapMessage) message;
         } else if (message instanceof ObjectMessage) {
             ObjectMessage objMessage = (ObjectMessage) message;
             try {
