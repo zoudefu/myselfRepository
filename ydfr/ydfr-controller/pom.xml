@@ -20,7 +20,7 @@
 		<project.deploy>deploy</project.deploy>
 		<project.tomcat.version>8.0.0-RC5</project.tomcat.version>
 		<!-- 自定义属性 -->
-		<spring.version>4.2.1.RELEASE</spring.version>
+		<spring.version>5.2.7.RELEASE</spring.version>
 		<org.springframework.version>4.2.1.RELEASE</org.springframework.version>
 	</properties>
   <dependencies>
